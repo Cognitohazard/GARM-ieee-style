@@ -214,10 +214,6 @@
           </if>
         </choose>
       </if>
-      <else-if match="any" variable="DOI">
-        <!-- doi: 10.1000/xyz123. -->
-        <text variable="DOI" prefix=" doi: " suffix="."/>
-      </else-if>
       <else-if variable="URL">
         <!-- Accessed: Mon. DD, YYYY. [Medium]. Available: https://URL.com/ -->
         <group delimiter=". " prefix=" " suffix=". ">
@@ -307,7 +303,7 @@
     </choose>
   </macro>
   <!-- Citation -->
-  <citation>
+  <citation collapse="citation-number">
     <sort>
       <key variable="citation-number"/>
     </sort>
@@ -342,7 +338,7 @@
               <text value="."/>
             </if>
             <else>
-              <text value=","/>
+              <text value="."/>
             </else>
           </choose>
           <text macro="access"/>
