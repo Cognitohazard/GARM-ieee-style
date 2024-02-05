@@ -1,2 +1,6 @@
-.env
-spec/sheldon/ci.json
+
+*
+
+!.gitignore
+!ieee.csl
+!*/
